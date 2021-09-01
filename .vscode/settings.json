@@ -1,0 +1,11 @@
+{
+  "eslint.options": {
+    "extensions": [".js", ".vue", ".ts", ".tsx"]
+  },
+  "eslint.run": "onSave",
+  "editor.codeActionsOnSave": {
+    // "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+  "git.ignoreLimitWarning": true
+}
