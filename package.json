@@ -20,5 +20,9 @@
     "lint-staged": "^11.1.2",
     "prettier": "2.3.2",
     "stylelint-config-prettier": "^8.0.2"
+  },
+  "dependencies": {
+    "eslint-plugin-compat": "^3.13.0",
+    "eslint-plugin-prettier": "^4.0.0"
   }
 }
