@@ -1,0 +1,25 @@
+1.
+A
+2.
+false
+3.
+0
+2
+4.
+x < 20
+5.
+a1+a2=1020
+6.
+101
+7.
+2.5
+8.
+undefined
+9.
+for (let i = 1; i < 7; i++) {
+  if (i == 3) {
+    document.write('<h' + i + '>' + '三级标题' + '</h' + i + '>');
+    continue;
+  }
+  document.write('<h' + i + '>' + i + '级标题' + '</h' + i + '>');
+}
