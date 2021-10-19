@@ -1,12 +1,84 @@
 /**
+ * 创建函数，生成当前时间字符串
+ * 2021-10-19 10:17:20
+ * 作为函数返回值返回
+ */
+
+function identify(num) {
+  return num < 10 ? '0' + num : num;
+}
+
+function getTime() {
+  let date2 = new Date();
+
+  let year = date2.getFullYear();
+  let mon = identify(date2.getMonth() + 1);
+  let day = identify(date2.getDate());
+  let hour = identify(date2.getHours());
+  let min = identify(date2.getMinutes());
+  let sec = identify(date2.getSeconds());
+
+  return year + '/' + mon + '/' + day + ' ' + hour + ':' + min + ':' + sec;
+}
+
+function createTimer() {
+  let timerId = setInterval(function () {
+    let result = getTime();
+    let timer = document.getElementById('timer');
+    timer.innerHTML = result;
+    // document.write(getTime() + '<br />');
+  }, 1000);
+  let btn = document.getElementById('btn');
+  btn.click = function () {
+    clearInterval(timerId);
+  };
+}
+
+createTimer();
+// document.write(new Date().toLocaleString());
+
+/*
+let date1 = new Date();
+
+let hour = date1.getHours();
+let minute = date1.getMinutes();
+let sec = date1.getSeconds();
+console.log(hour + ':' + minute + ':' + sec);
+
+let year = date1.getFullYear();
+// 获取的月份的取值范围 0~11
+let month = date1.getMonth() + 1;
+// getDate 获取今天的日期
+let day = date1.getDate();
+console.log(year + '/' + month + '/' + day);
+
+// 获取星期 日期对象.getDay();
+// 获取星期的取值范围 0~6
+let weeks = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+let weekday = date1.getDay();
+console.log(weeks[weekday]);
+
+let msec = date1.getMilliseconds();
+console.log(msec);
+*/
+
+/*
+let r = Math.random();
+let result = parseInt(r * 100 + 1);
+console.log(result);
+*/
+
+/**
  * Math.random() 取值范围 0 <= result < 1 的小数
  *
  * 如果变换随机值的范围，可以乘以对应的值
  */
+/*
 let result = Math.random();
 let arr = ['hello', 'world', 'javascript', 'math'];
 let index = parseInt(result * arr.length);
 console.log(index);
+*/
 
 /*
 // Math.round() 四舍五入操作
