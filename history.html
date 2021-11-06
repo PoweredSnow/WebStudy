@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>history</title>
+  </head>
+  <body>
+    <a href="./study.html">study</a>
+    <script>
+      /**
+       * 获取当前页面的 url 路径
+       * host 主机名(ip) + 端口
+       * hostname 主机名
+       * port 端口
+       */
+      console.log(location.href);
+      /**
+       * 封装为一个函数，函数参数为传入的字符串
+       * 返回值为对象结构
+       */
+      let searchStr = location.search;
+      function fun(str) {
+        str = str.slice(1);
+        let arr = str.split('&');
+        let obj = {};
+        for (let i = 0; i < arr.length; i++) {
+          let childArr = arr[i].split('=');
+          obj[childArr[0]] = childArr[1];
+          // console.log(childArr);
+        }
+        return obj;
+      }
+      let obj = fun(searchStr);
+      console.log(obj);
+      // console.log(searchStr);
+      // console.log(arr);
+    </script>
+  </body>
+</html>

@@ -1,44 +1,108 @@
-/*
-let index = 1;
-setInterval(function () {
-  document.write('当前值为' + index + '<br />');
-  index = index + 1;
-}, 1000);
-*/
+/**
+ * JavaScript 在浏览器中控制页面元素（DOM）、控制浏览器（BOM）
+ *
+ * DOM 节点对象用来控制网页上的元素
+ * 获取 DOM 节点对象的方式
+ * (1) 直接获取
+ * document.getElementById(id属性值)
+ * 获取页面中特定 id 值得网页元素的 DOM 节点对象
+ * 直接得到的就是一个对象
+ * document,getElementsByTagName(标签名)
+ * 获取页面中特定标签名的网页元素的 DOM 节点对象集合（类数组）
+ * 需要遍历这个集合，取到其中的 DOM 节点对象，来完成 DOM 操作过程
+ * 给 DOM 节点对象添加事件时，需要注意，在事件的回调函数中，使用 this
+ * 指向当前出发事件的 DOM 节点对象
+ * documnet.getElementsByClassName(class属性值)
+ * 获取页面中特定的 class 属性值的网页元素的 DOM 节点对象集合（类数组）
+ * 需要遍历这个集合，获取集合中的 DOM 节点对象，完成 DOM 操作过程
+ * (2)通过节点关系获取的
+ * 节点树（包含注释和空格） 元素树（不包含注释和空格）
+ * 父节点.children 得到的是子节点的 DOM 对象集合
+ * 父节点.firstElementChild 得到第一个元素节点的 DOM 对象
+ * 父节点.lastElementChild 得到最后一个子元素节点的 DOM 对象
+ * 子节点.parentNode 得到子节点的父节点 DOM 对象
+ * 节点.previousElementSibling 前一个兄弟节点的 DOM 对象
+ * 节点.nextElementSibling 后一个兄弟节点的 DOM 对象
+ */
 
-/*
-document.write('3秒钟后会跳转到成人网站');
-setTimeout(function () {
-  window.location = 'http://www.3333ec.com';
-}, 3000);
-*/
+/* let item2 = document.getElementById('item2');
+item2.onclick = function () {
+    this.previousElementSibling.style.backgroundColor = 'red';
+    this.nextElementSibling.style.backgroundColor = 'yellow';
+} */
 
-/*
-let btn = document.getElementById('btn');
-// 可以延迟执行一段代码
-let timeId = setTimeout(function () {
-  alert('3秒时间到！');
-}, 3000);
-// console.log(timeId);
-// clearTimeout(id);
-// 清除特定 id 的延迟执行
-btn.onclick = function () {
-  clearTimeout(timeId);
-};
-*/
+/* let con = document.getElementById('con');
+let last = con.lastElementChild.lastElementChild;
+console.log(last);
+let img4 = document.getElementById('img4');
+// img4.parentNode.style.backgroundColor = 'purple';
+// img4.parentNode.parentNode.style.backgroundColor = 'orange';
+img4.parentNode.parentNode.parentNode.style.backgroundColor = 'lightblue'; */
 
-// 接受的用户输入会作为 prompt 的返回值
-// 如果用户取消，返回值为 null
-/*
-let p1 = window.prompt('请输入用户姓名：', '文本框默认值');
-console.log(p1);
-*/
+/**
+ * 节点树属性 childNodes，得到集合包含有空格和注释，实用性较差
+ * 元素树属性，children，得到集合包含元素节点，不包含空格和注释
+ *
+ * 适用于子元素数量不确定，然后 class 属性值不确定
+ * 并且可能会有动态更新的情况
+ */
+/* let con = document.getElementById('con');
+console.log(con.childNodes);
+let itemList = con.children;
+for (let i = 0; i < itemList.length; i++) {
+    itemList[i].onmouseover = function () {
+        this.style.backgroundColor = 'orange';
+    }
+    itemList[i].onmouseout = function () {
+        this.style.backgroundColor = 'white';
+    }
+}
+console.log(con.firstChild);
+console.log(con.firstElementChild); */
 
+/**
+ * 根据元素的 class 属性来获取对应网页元素的 DOM 节点对象的集合
+ */
 /*
-let result = window.confirm('确认删除该条数据吗？');
-if (result) {
-  alert('用户确认了操作');
-} else {
-  alert('用户取消了操作');
+let con = document.getElementById('con');
+let itemList = con.getElementsByClassName('item');
+for (let i = 0; i < itemList.length; i++) {
+    itemList[i].onclick = function () {
+        this.style.backgroundColor = 'red';
+    }
 }
 */
+
+/**
+ * document.getElementsByTagName(标签名字)
+ * 获取页面中特定标签名的网页元素的 DOM 节点对象
+ */
+/*
+let con = document.getElementById('con');
+let itemList = con.getElementsByTagName('div');
+console.log(itemList);
+for (let i = 0; i < itemList.length; i++) {
+    itemList[i].onmouseover = function () {
+        this.style.backgroundColor = 'blue';
+    }
+    itemList[i].onmouseout = function () {
+        this.style.backgroundColor = 'white';
+    }
+}
+*/
+
+/**
+ * document 是对整个网页文档的抽象
+ * document.getElementById('con')
+ * 表示在整个网页文档中，根据元素的 id 属性值获取
+ * 到该元素的 DOM 节点对象
+ */
+// let con = document.getElementById('con');
+// let img1 = document.getElementById('img1');
+// img1.onclick = function () {
+//     /**
+//      * 在事件的回调函数中，this 指向当前触发事件的
+//      * DOM 节点对象
+//      */
+//     this.style.border = '1px solid red';
+// }

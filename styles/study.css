@@ -1,0 +1,32 @@
+/* .con {
+  height: 30px;
+  width: 500px;
+  margin: 0 auto;
+  background-color: lightgrey;
+} */
+.pg {
+  height: 30px;
+  background-color: red;
+  width: 0px;
+}
+.footer {
+  height: 300px;
+  width: 1000px;
+  background-color: red;
+  margin-top: 800px;
+}
+
+.con {
+  width: 500px;
+  height: 100px;
+  border: 2px solid red;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.con .item {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  float: left;
+}

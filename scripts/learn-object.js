@@ -3,7 +3,7 @@
  * 2021-10-19 10:17:20
  * 作为函数返回值返回
  */
-
+/*
 function identify(num) {
   return num < 10 ? '0' + num : num;
 }
@@ -35,6 +35,8 @@ function createTimer() {
 }
 
 createTimer();
+*/
+
 // document.write(new Date().toLocaleString());
 
 /*
