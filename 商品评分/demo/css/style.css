@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    width: 485px;
+    margin: 20px auto;
+}
+
+#mark {
+    line-height: 1.5em;
+}
+
+#mark h1 {
+    height: 29px;
+    background: url(../images/bg.jpg);
+    font-family: "黑体";
+    font-size: 12px;
+    color: #666;
+    line-height: 29px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+    /* 字之间的距离 */
+}
+
+#pic {
+    margin: 10px 0px;
+}
+
+#txt {
+    width: 100%;
+    height: 170px;
+    margin: 0px auto;
+}
+
+.btn {
+    width: 75px;
+    height: 22px;
+    background: url(../images/sanjiao.png) no-repeat right center;
+    float: right;
+    margin: 10px;
+}

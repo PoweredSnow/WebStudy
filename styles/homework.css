@@ -1,0 +1,49 @@
+form {
+  margin: 2em auto;
+  width: 400px;
+}
+
+.name {
+  float: left;
+  text-indent: 1em;
+  font-size: 0.75em;
+  color: #333;
+  height: 18px;
+  line-height: 18px;
+}
+
+.input-wrap {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #999;
+}
+
+input {
+  text-indent: 1em;
+  float: right;
+  width: 225px;
+  height: 40px;
+  box-sizing: border-box;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.text {
+  font-size: 0.5em;
+  color: #999;
+}
+
+.button {
+  width: 302px;
+}
+
+button {
+  width: 302px;
+  height: 42px;
+  background-color: red;
+  color: white;
+  border: none;
+}

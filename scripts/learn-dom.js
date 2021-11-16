@@ -1,3 +1,57 @@
+/**
+ * 2.考虑给合适的元素绑定事件
+ * 只能给 DOM 节点对象绑定事件
+ * node.onclik = function () {}
+ * node.onmouseover = function () {}
+ * node.onfocus = function () {}
+ * node.onblur = function () {}
+ * node.onmouseout = function () {}
+ *
+ * 3.在事件的回调函数中，实际的完成操作过程
+ * 元素的标签中内容的操作 node.innerHTML node.innerText
+ * 元素标签上属性的操作
+ * node.getAttribute('属性名');
+ * node.setAttribute('属性名'，'属性值');
+ * node.hasAttribute('属性名'); 返回值是 true/false
+ * node.removeAttribute('属性名');
+ *
+ * 网页元素的增加、修改、删除
+ * document.createElement('标签名');
+ * node.appendChild(child);
+ * node.insertBefore(new, old);
+ * node.replaceChild(new, old);
+ * node.removeChild(child);
+ */
+
+/*
+// 创建表格元素
+const tb = document.createElement('table');
+tb.setAttribute('border', 1);
+tb.setAttribute('height', '200px');
+tb.setAttribute('width', '500px');
+tb.setAttribute('cellSpacing', 0);
+// 创建行
+for (let i = 0; i < 7; i++) {
+    const trobj = document.createElement('tr');
+    for (let j = 0; j < 5; j++) {
+        const tdobj = document.createElement('td');
+        if (j == 0) {
+            tdobj.style.width = '120px';
+            const btn = document.createElement('button');
+            btn.innerHTML = '点击我删除第' + (i + 1) + '行';
+            btn.onclick = function () {
+                tb.removeChild(this.parentNode.parentNode);
+            }
+            tdobj.appendChild(btn);
+        }
+        trobj.appendChild(tdobj);
+    }
+    tb.appendChild(trobj);
+}
+document.body.appendChild(tb);
+*/
+
+
 /*
 const list = document.getElementById('list');
 const li1 = document.getElementById('li1');
@@ -20,11 +74,13 @@ btn1.onclick = function () {
 }
 */
 
-/*
+
 const con = document.getElementById('con');
 const add = document.getElementById('add');
 const insert = document.getElementById('insert');
 const img1 = document.getElementById('img1');
+const remove = document.getElementById('remove');
+const replace = document.getElementById('replace');
 
 add.onclick = function () {
     // 创建一个节点元素的 DOM 对象
@@ -40,7 +96,17 @@ insert.onclick = function () {
     // 在 con 中添加新元素，新元素位置在 img1 之前
     con.insertBefore(el, img1);
 }
-*/
+
+remove.onclick = function () {
+    con.removeChild(img1);
+}
+
+replace.onclick = function () {
+    const img2 = document.createElement('img');
+    img2.src = 'images/fruit3.png';
+    con.replaceChild(img2, img1);
+}
+
 
 // 获取元素节点的 nodeName 是该元素标签名的大写
 // 获取文本节点的 nodeName 是 #text

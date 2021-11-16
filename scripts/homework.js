@@ -1,4 +1,65 @@
-//04. 二、2.
+// 05. 三
+      const inputList = document.getElementsByTagName('input');
+      let flag = true;
+
+      for (let i = 0; i < inputList.length; i++) {
+        inputList[i].onfocus = function () {
+          if (!flag) return;
+          this.setAttribute('placeholder', '');
+          const txt = document.getElementsByClassName('text');
+          // this.parentNode.style.borderColor = '#999';
+          // this.parentNode.nextElementSibling.style.color = '#333';
+          switch (i) {
+            case 0:
+              txt[0].textContent = '支持中文数字，字符为4-20个';
+              break;
+            case 1:
+              txt[1].textContent = '建议使用两种字符组合，6-20个字符';
+              break;
+            case 2:
+              txt[2].textContent = '请再次输入密码';
+              break;
+            case 3:
+              txt[3].textContent = '完成验证后，您可以使用该号找回密码';
+              break;
+            default:
+              txt[4].textContent = '支持中文数字，字符为4-20个';
+              break;
+          }
+        }
+
+        inputList[i].onblur = function () {
+          flag = false;
+          if (this.value.length < 4 || this.value.length > 20) {
+            this.parentNode.style.borderColor = 'red';
+            if (i === 1 && this.value.length < 4) {
+              this.parentNode.nextElementSibling.textContent = '长度需大于6';
+            } else if (this.value.length < 4) {
+              this.parentNode.nextElementSibling.textContent = '长度需大于4';
+            } else {
+              this.parentNode.nextElementSibling.textContent = '长度需小于20';
+            }
+            this.parentNode.nextElementSibling.style.color = 'red';
+          }
+        }
+      }
+
+
+/*
+const form = document.createElement('form');
+for (let i = 0; i < 6; i++) {
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.style.width = '250px';
+  input.style.height = '30px';
+  input.style.margin = '0 auto';
+  form.appendChild(input);
+}
+document.body.appendChild(form);
+*/
+
+
+// 04. 二、2.
 /*
 function getTimer() {
 

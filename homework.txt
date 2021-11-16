@@ -2,10 +2,18 @@
 一、1. document.getElementById();
 document.getElementsByTagName();
 document.getElementsByClassName();
-2. chirldren;
+2. children;
 3. getAttribute();
 setAttribute();
-二、1.
+二、1. node.innerHTML 获取或者设置 DOM 节点中的 html 代码
+node.innerText 获取或者设置 DOM 节点中的文本内容
+2. 要想得到的是子节点的 DOM 对象集合，需要使用 父节点.children;
+要想得到第一个元素节点的 DOM 对象，需要使用 父节点.firstElementChild;
+要想得到最后一个子元素节点的 DOM 对象，需要使用 父节点.lastElementChild;
+要想得到子节点的父节点 DOM 对象，需要使用 子节点.parentNode;
+要想得到前一个兄弟节点的 DOM 对象，需要使用 节点.previousElementSibling,
+要想得到后一个兄弟节点的 DOM 对象，需要使用 节点.nextElementSibling;
+三、
 
 
 0x03.
