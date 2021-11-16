@@ -1,3 +1,23 @@
+0x05.
+一、1. document.getElementById();
+document.getElementsByTagName();
+document.getElementsByClassName();
+2. chirldren;
+3. getAttribute();
+setAttribute();
+二、1.
+
+
+0x03.
+一、1.
+window.open('http://example.com')
+window.location.href = 'http://example.com'
+2.
+history.back() 或 history.go(负值);
+二、1.
+
+
+
 0x02.
 一、
 1. JavaScript 内置函数；自定义函数

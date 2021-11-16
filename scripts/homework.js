@@ -1,5 +1,51 @@
-var list =["学号","姓名","年龄","爱好","操作"];
-console.log(list);
+//04. 二、2.
+/*
+function getTimer() {
+
+  let date = new Date();
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+  let hour = date.getHours();
+  let minute = date.getMinutes();
+  let second = date.getSeconds();
+  let list = [year, month, day, hour, minute, second];
+
+  for (let i = 0; i < list.length; i++) {
+      list[i] = list[i] < 10 ? '0' + list[i] : list[i];
+  }
+
+  return list[0] + '年' + list[1] + '月' + list[2] + '日 ' + list[3] + ':' + list[4] + ':' + list[5];
+}
+
+let timerId;
+
+function setTimer() {
+  timerId = setInterval(function () {
+    let result = getTimer();
+    const time = document.getElementById('time');
+    time.value = result;
+  }, 1000);
+}
+
+function clearTimer() {
+  clearInterval(timerId);
+}
+
+setTimer();
+*/
+
+//04. 二、1.
+/*
+const btn = document.getElementById('btn');
+btn.onclick = function () {
+  let temp = prompt();
+  setInterval(function () {
+    console.log(temp)
+  }, 1000);
+}
+*/
+
 
 // 03 =_=
 /*
