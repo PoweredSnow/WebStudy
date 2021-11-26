@@ -1,3 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  height: 52px;
+  line-height: 52px;
+  float: left;
+}
+
+#white {
+  background: white;
+}
+
+.wrap {
+  height: 52px;
+  width: 300px;
+  margin-left: 7.5px;
+  margin-bottom: 5px;
+  background: #e68c8b;
+}
+
+.arrowhead {
+  width: 26px;
+  height: 52px;
+  float: left;
+}
+
+/*
 form {
   margin: 2em auto;
   width: 400px;
@@ -47,3 +77,4 @@ button {
   color: white;
   border: none;
 }
+*/

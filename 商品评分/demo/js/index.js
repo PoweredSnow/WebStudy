@@ -4,6 +4,7 @@ const comments = ['差', '一般', '中等', '还行', '好'];
 
 for (let i = 0; i < imgList.length; i++) {
     imgList[i].onmousemove = function () {
+        console.log(i);
         let imgSrc = '';
         if (i < 2) {
             imgSrc = 'images/star1.png';

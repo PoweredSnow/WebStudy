@@ -1,49 +1,77 @@
-// 05. 三
-      const inputList = document.getElementsByTagName('input');
-      let flag = true;
+// 07
+const bgimg = document.getElementById('bgimg');
+const img = document.getElementsByClassName('arrow');
+const right = document.getElementsByClassName('wrap');
 
-      for (let i = 0; i < inputList.length; i++) {
-        inputList[i].onfocus = function () {
-          if (!flag) return;
-          this.setAttribute('placeholder', '');
-          const txt = document.getElementsByClassName('text');
-          // this.parentNode.style.borderColor = '#999';
-          // this.parentNode.nextElementSibling.style.color = '#333';
-          switch (i) {
-            case 0:
-              txt[0].textContent = '支持中文数字，字符为4-20个';
-              break;
-            case 1:
-              txt[1].textContent = '建议使用两种字符组合，6-20个字符';
-              break;
-            case 2:
-              txt[2].textContent = '请再次输入密码';
-              break;
-            case 3:
-              txt[3].textContent = '完成验证后，您可以使用该号找回密码';
-              break;
-            default:
-              txt[4].textContent = '支持中文数字，字符为4-20个';
-              break;
-          }
-        }
+const imgList = [
+  'images/web2-07-master/q1.jpg', 'images/web2-07-master/q2.jpg',
+  'images/web2-07-master/q3.jpg', 'images/web2-07-master/q4.jpg',
+  'images/web2-07-master/q5.jpg'];
 
-        inputList[i].onblur = function () {
-          flag = false;
-          if (this.value.length < 4 || this.value.length > 20) {
-            this.parentNode.style.borderColor = 'red';
-            if (i === 1 && this.value.length < 4) {
-              this.parentNode.nextElementSibling.textContent = '长度需大于6';
-            } else if (this.value.length < 4) {
-              this.parentNode.nextElementSibling.textContent = '长度需大于4';
-            } else {
-              this.parentNode.nextElementSibling.textContent = '长度需小于20';
-            }
-            this.parentNode.nextElementSibling.style.color = 'red';
-          }
-        }
+for (let i = 0; i < right.length; i++) {
+  right[i].onmouseover = function () {
+    for (let i = 0; i < right.length; i++) {
+      if (right[i].hasAttribute('id')) {
+        right[i].removeAttribute('id');
+        img[i].src = '';
       }
+    }
 
+    this.setAttribute('id', 'white');
+    bgimg.src = imgList[i];
+    img[i].src = 'images/web2-07-master/t10.jpg';
+  }
+}
+
+/*
+// 05. 三
+const inputList = document.getElementsByTagName('input');
+let flag = true;
+
+for (let i = 0; i < inputList.length; i++) {
+  console.log(i);
+  inputList[i].onfocus = function () {
+    console.log(i);
+    if (!flag) return;
+    this.setAttribute('placeholder', '');
+    const txt = document.getElementsByClassName('text');
+    // this.parentNode.style.borderColor = '#999';
+    // this.parentNode.nextElementSibling.style.color = '#333';
+    switch (i) {
+      case 0:
+        txt[0].textContent = '支持中文数字，字符为4-20个';
+        break;
+      case 1:
+        txt[1].textContent = '建议使用两种字符组合，6-20个字符';
+        break;
+      case 2:
+        txt[2].textContent = '请再次输入密码';
+        break;
+      case 3:
+        txt[3].textContent = '完成验证后，您可以使用该号找回密码';
+        break;
+      default:
+        txt[4].textContent = '支持中文数字，字符为4-20个';
+        break;
+    }
+  }
+
+  inputList[i].onblur = function () {
+    flag = false;
+    if (this.value.length < 4 || this.value.length > 20) {
+      this.parentNode.style.borderColor = 'red';
+      if (i === 1 && this.value.length < 4) {
+        this.parentNode.nextElementSibling.textContent = '长度需大于6';
+      } else if (this.value.length < 4) {
+        this.parentNode.nextElementSibling.textContent = '长度需大于4';
+      } else {
+        this.parentNode.nextElementSibling.textContent = '长度需小于20';
+      }
+      this.parentNode.nextElementSibling.style.color = 'red';
+    }
+  }
+}
+*/
 
 /*
 const form = document.createElement('form');
@@ -118,8 +146,8 @@ function MyFile(file) {
     }
   }
   this.createPictures = function (files) {
-    for (let i = 0, j = 0; i < 10; i++, j += 100) {
-      this.fill(j);
+    for (let i = 0, i = 0; i < 10; i++, i += 100) {
+      this.fill(i);
       files.push(this.file);
     }
   }
@@ -137,8 +165,8 @@ let arr = [
 ];
 let num = parseInt(Math.random() * 1000 + 1);
 console.log(num);
-for (let i = 0, j = -100, k = 0; i < 10; i++, j += 100, k += 100) {
-  if (num > j + 100 && num <= k + 100) {
+for (let i = 0, i = -100, k = 0; i < 10; i++, i += 100, k += 100) {
+  if (num > i + 100 && num <= k + 100) {
     console.log('该数字对应的图片应存放在 ' + arr[i] + ' 内');
   }
 }

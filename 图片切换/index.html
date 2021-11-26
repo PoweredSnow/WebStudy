@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>New Document</title>
+    <meta name="Generator" content="EditPlus" />
+    <meta name="Author" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <style type="text/css">
+      #main {
+        width: 1000px;
+        margin: auto;
+      }
+      #smallpic {
+        height: 120px;
+      }
+      img {
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      #smallpic img:hover {
+        cursor: pointer;
+      }
+      .pb {
+        border: 3px solid red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="smallpic">
+        <img src="images/1.jpg" width="180" height="100" />
+        <img src="images/2.jpg" width="180" height="100" />
+        <img src="images/3.jpg" width="180" height="100" />
+        <img src="images/4.jpg" width="180" height="100" />
+        <img src="images/5.jpg" width="180" height="100" />
+      </div>
+      <div>
+        <img src="images/0.jpg" id="bigpic" />
+      </div>
+    </div>
+  </body>
+  <script>
+    var smallpic = document.getElementById('smallpic');
+    var imgList = smallpic.getElementsByTagName('img');
+    var bigpic = document.getElementById('bigpic');
+    for (var i = 0; i < imgList.length; i++) {
+      imgList[i].onclick = function () {
+        for (var i = 0; i < imgList.length; i++) {
+          if (imgList[i].hasAttribute('class')) {
+            imgList[i].removeAttribute('class');
+          }
+        }
+        this.setAttribute('class', 'pb');
+        var imgSrc = this.getAttribute('src');
+        bigpic.setAttribute('src', imgSrc);
+
+        this.setAttribute('index', 1);
+      };
+    }
+  </script>
+</html>

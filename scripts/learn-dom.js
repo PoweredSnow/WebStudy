@@ -74,7 +74,7 @@ btn1.onclick = function () {
 }
 */
 
-
+/*
 const con = document.getElementById('con');
 const add = document.getElementById('add');
 const insert = document.getElementById('insert');
@@ -106,7 +106,7 @@ replace.onclick = function () {
     img2.src = 'images/fruit3.png';
     con.replaceChild(img2, img1);
 }
-
+*/
 
 // 获取元素节点的 nodeName 是该元素标签名的大写
 // 获取文本节点的 nodeName 是 #text
