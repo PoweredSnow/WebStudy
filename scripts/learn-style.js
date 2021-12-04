@@ -1,13 +1,13 @@
 // window.getComputedStyle(DOM 节点对象, ":hover")
 // 获取网页元素最终起作用的样式封装的对象
 // 得到结果为只读的对象
-let con = document.getElementById('con');
+/* let con = document.getElementById('con');
 let obj = getComputedStyle(con);
 if (con.currentStyle) {
     console.log(con.currentStyle['backgroundColor']);
 } else {
     console.log(getComputedStyle(con))
-}
+} */
 
 /*
 const list = document.getElementsByClassName('list');
