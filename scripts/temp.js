@@ -1,15 +1,17 @@
-let total = 0;
-let strs = ['Underpants:6.99',
-'Socks:5.99', 'T-shirt:14.99',
-'Trousers:31.99', 'Shoes:23.99'];
-for (let i = 0; i < strs.length; i++) {
-    let names = strs[i].split(':')[0];
-    let prices = Number(strs[i].split(':')[1]);
-    total += prices;
-    let itemText = names + ' -$ ' + prices;
-    console.log(itemText);
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion']
+
+for (const cat of cats) {
+    console.log(cat);
 }
-console.log(total);
+
+/* const buttonA = document.querySelector('#button_A');
+const headingA = document.querySelector('#heading_A');
+
+buttonA.onclick = () => {
+    const name = prompt('What is your name?');
+    alert(`Hello ${name}, nice to see you!`);
+    headingA.textContent = `Welcome %{name}`;
+} */
 
 /*
 const btn = document.querySelector('button');

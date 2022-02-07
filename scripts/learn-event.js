@@ -1,4 +1,4 @@
-const box = document.getElementById('box');
+/* const box = document.getElementById('box');
 box.onmousedown = function (e) {
     let x = e.offsetX;
     let y = e.offsetY;
@@ -11,7 +11,7 @@ box.onmousedown = function (e) {
 }
 box.onmouseup = function () {
     document.onmousemove = null;
-}
+} */
 
 /* const bg = document.getElementById('bg');
 const login = document.getElementById('login');

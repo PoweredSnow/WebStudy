@@ -1,7 +1,7 @@
 /**
  * 2.考虑给合适的元素绑定事件
  * 只能给 DOM 节点对象绑定事件
- * node.onclik = function () {}
+ * node.onclick = function () {}
  * node.onmouseover = function () {}
  * node.onfocus = function () {}
  * node.onblur = function () {}
