@@ -1,8 +1,9 @@
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion']
-
-for (const cat of cats) {
-    console.log(cat);
+function hello(name='Chris') {
+    console.log(`Hello ${name}!`);
 }
+
+hello('Ari');
+hello();
 
 /* const buttonA = document.querySelector('#button_A');
 const headingA = document.querySelector('#heading_A');
